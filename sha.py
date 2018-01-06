@@ -106,7 +106,6 @@ def hmac(key, data):
     if len(key) < 64:
         key += b"\x00" * (64 - len(key))
     elif len(key) > 64 * 2:
-        print("key > 64")
         u = sha1()
         u.update(key)
         key = u.hexdigest()
